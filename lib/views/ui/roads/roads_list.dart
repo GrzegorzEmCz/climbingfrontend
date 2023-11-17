@@ -32,9 +32,9 @@ class RoadListPage extends StatelessWidget {
               return const Center(child: CircularProgressIndicator());
             } else if (snapshot.hasError) {
               return Text("Error ${snapshot.error}");
-            }else if (snapshot.data!.isEmpty) {
+            } else if (snapshot.data!.isEmpty) {
               return const SearchLoading(text: "No Roads to display");
-            }  else {
+            } else {
               final road = snapshot.data;
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
@@ -43,7 +43,9 @@ class RoadListPage extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       final roads = road[index];
-                      return VerticalTileWidget(road: roads,);
+                      return VerticalTileWidget(
+                        road: roads,
+                      );
                     }),
               );
             }

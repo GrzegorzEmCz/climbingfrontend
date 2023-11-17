@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:climbingfrontend/views/common/vertical_shimmer.dart';
 
-
 class SearchShimmer extends StatelessWidget {
   const SearchShimmer({
     Key? key,
@@ -16,8 +15,8 @@ class SearchShimmer extends StatelessWidget {
         itemCount: 3,
         itemBuilder: (_, index) {
           return const Padding(
-            padding:  EdgeInsets.all(12),
-            child:  VerticalShimmer(),
+            padding: EdgeInsets.all(12),
+            child: VerticalShimmer(),
           );
         });
   }

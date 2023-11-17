@@ -71,15 +71,13 @@ class _ChatPageState extends State<ChatPage> {
 
   void connect() {
     var chatNotifier = Provider.of<ChatNotifier>(context, listen: false);
-    socket =
-        IO.io('http://localhost:3000', <String, dynamic>{
+    socket = IO.io('http://localhost:3000', <String, dynamic>{
       "transports": ['websocket'],
       "autoConnect": false,
     });
     socket!.emit("setup", chatNotifier.userId);
     socket!.connect();
     socket!.onConnect((_) {
-      
       socket!.on('online-users', (userId) {
         chatNotifier.online
             .replaceRange(0, chatNotifier.online.length, [userId]);
@@ -168,7 +166,7 @@ class _ChatPageState extends State<ChatPage> {
                   padding: EdgeInsets.all(12.0.h),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(()=> const MainScreen());
+                      Get.to(() => const MainScreen());
                     },
                     child: const Icon(MaterialCommunityIcons.arrow_left),
                   ),
@@ -216,9 +214,8 @@ class _ChatPageState extends State<ChatPage> {
                                       child: Column(
                                         children: [
                                           ReusableText(
-                                              text: chatNotifier.msgTime(data
-                                                  .updatedAt
-                                                  .toString()),
+                                              text: chatNotifier.msgTime(
+                                                  data.updatedAt.toString()),
                                               style: appstyle(
                                                   16,
                                                   Color(kDark.value),
@@ -229,8 +226,7 @@ class _ChatPageState extends State<ChatPage> {
                                                     chatNotifier.userId
                                                 ? Alignment.centerRight
                                                 : Alignment.centerLeft,
-                                            backGroundColor: data
-                                                        .sender.id ==
+                                            backGroundColor: data.sender.id ==
                                                     chatNotifier.userId
                                                 ? Color(kOrange.value)
                                                 : Color(kLightBlue.value),
@@ -266,7 +262,7 @@ class _ChatPageState extends State<ChatPage> {
                       child: MessaginTextField(
                           onSubmitted: (_) {
                             String msg = messageController.text;
-                              sendMessage(msg, widget.id, receiver);
+                            sendMessage(msg, widget.id, receiver);
                           },
                           sufixIcon: GestureDetector(
                             onTap: () {

@@ -27,9 +27,7 @@ class _SearchPageState extends State<SearchPage> {
           hintText: "Search for a road",
           controller: search,
           onEditingComplete: () {
-            setState(() {
-              
-            });
+            setState(() {});
           },
           suffixIcon: GestureDetector(
             onTap: () {
@@ -42,31 +40,30 @@ class _SearchPageState extends State<SearchPage> {
       ),
       body: search.text.isNotEmpty
           ? Padding(
-            padding:  EdgeInsets.symmetric(horizontal:12.0.w, vertical: 12.h),
-            child: FutureBuilder<List<RoadsResponse>>(
-                future: RoadsHelper.searchRoads(search.text),
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.waiting) {
-                    return const Center(child: CircularProgressIndicator());
-                  } else if (snapshot.hasError) {
-                    return Text("Error ${snapshot.error}");
-                  } else if (snapshot.data!.isEmpty) {
-                    return const SearchLoading(text: "Road not found");
-                  } else {
-                    final roads = snapshot.data;
-                    return ListView.builder(
-                        itemCount: roads!.length,
-                        itemBuilder: (context, index) {
-                          final road = roads[index];
-                          return VerticalTileWidget(road: road);
-                        });
-                  }
-                }),
-          )
+              padding: EdgeInsets.symmetric(horizontal: 12.0.w, vertical: 12.h),
+              child: FutureBuilder<List<RoadsResponse>>(
+                  future: RoadsHelper.searchRoads(search.text),
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return const Center(child: CircularProgressIndicator());
+                    } else if (snapshot.hasError) {
+                      return Text("Error ${snapshot.error}");
+                    } else if (snapshot.data!.isEmpty) {
+                      return const SearchLoading(text: "Road not found");
+                    } else {
+                      final roads = snapshot.data;
+                      return ListView.builder(
+                          itemCount: roads!.length,
+                          itemBuilder: (context, index) {
+                            final road = roads[index];
+                            return VerticalTileWidget(road: road);
+                          });
+                    }
+                  }),
+            )
           : const SearchLoading(
               text: "Start Searching For Roads",
             ),
     );
   }
 }
-

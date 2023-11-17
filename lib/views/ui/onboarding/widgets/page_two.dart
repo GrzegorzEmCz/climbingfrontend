@@ -15,24 +15,35 @@ class PageTwo extends StatelessWidget {
         height: hieght,
         color: Color(kDarkBlue.value),
         child: Column(
-            children: [
-              const HeightSpacer(size: 45),
-              Padding(padding: EdgeInsets.all(8.w), child: Image.asset("assets/images/page2.png"),),
-              const HeightSpacer(size: 20),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Stable yourself \n with your ability",
-                    textAlign: TextAlign.center,
-                    style: appstyle(30, Color(kLight.value), FontWeight.w500),
+          children: [
+            const HeightSpacer(size: 45),
+            Padding(
+              padding: EdgeInsets.all(8.w),
+              child: Image.asset("assets/images/page2.png"),
+            ),
+            const HeightSpacer(size: 20),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Stable yourself \n with your ability",
+                  textAlign: TextAlign.center,
+                  style: appstyle(30, Color(kLight.value), FontWeight.w500),
+                ),
+                const HeightSpacer(size: 10),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Text(
+                    "data",
+                    style: appstyle(
+                        14, Color(kLightGrey.value), FontWeight.normal),
                   ),
-                  const HeightSpacer(size: 10),
-                  Padding(padding: const EdgeInsets.all(8), child: Text("data", style: appstyle(14, Color(kLightGrey.value  ),FontWeight.normal),),)
-                ],
-              )
-            ],
-          ),),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }

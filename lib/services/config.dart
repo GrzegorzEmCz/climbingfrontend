@@ -11,4 +11,3 @@ class Config {
   static const String chatsUrl = "/api/chats";
   static const String messagingUrl = "/api/messages";
 }
-

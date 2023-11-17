@@ -67,7 +67,7 @@ class ImageUpoader extends ChangeNotifier {
     await ref.putFile(image);
 
     imageUrl = (await ref.getDownloadURL());
-   
+
     return imageUrl;
   }
 }

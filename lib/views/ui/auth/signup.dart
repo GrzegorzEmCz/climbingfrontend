@@ -58,8 +58,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   const HeightSpacer(size: 50),
                   ReusableText(
                       text: "Hello, Welcome!",
-                      style:
-                          appstyle(30, Color(kDark.value), FontWeight.w600)),
+                      style: appstyle(30, Color(kDark.value), FontWeight.w600)),
                   ReusableText(
                       text: "Fill the details to signup for an account",
                       style: appstyle(
@@ -132,14 +131,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   CustomButton(
                     onTap: () {
                       loginNotifier.firstTime = true;
-                        SignupModel model = SignupModel(
-                            username: name.text,
-                            email: email.text,
-                            password: password.text);
+                      SignupModel model = SignupModel(
+                          username: name.text,
+                          email: email.text,
+                          password: password.text);
 
-                        signupNotifier.upSignup(model);
-                  
-                      
+                      signupNotifier.upSignup(model);
                     },
                     text: "Sign Up",
                   )

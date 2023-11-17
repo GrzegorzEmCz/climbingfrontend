@@ -23,7 +23,7 @@ class ChatHelper {
     var url = Uri.http(Config.apiUrl, Config.chatsUrl);
     var response = await client.post(url,
         headers: requestHeaders, body: jsonEncode(model.toJson()));
-   
+
     if (response.statusCode == 200) {
       var first = initialChatFromJson(response.body).id;
 

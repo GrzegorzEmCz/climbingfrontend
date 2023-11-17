@@ -66,9 +66,8 @@ class RoadsHelper {
     }
   }
 
-
-//SEARCH 
- static Future<List<RoadsResponse>> searchRoads(String searchQeury) async {
+//SEARCH
+  static Future<List<RoadsResponse>> searchRoads(String searchQeury) async {
     Map<String, String> requestHeaders = {
       'Content-Type': 'application/json',
     };

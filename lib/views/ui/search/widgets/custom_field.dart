@@ -9,7 +9,8 @@ class CustomField extends StatelessWidget {
     this.validator,
     this.keyboard,
     this.suffixIcon,
-    this.obscureText, this.onEditingComplete,
+    this.obscureText,
+    this.onEditingComplete,
   }) : super(key: key);
 
   final TextEditingController controller;

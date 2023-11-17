@@ -81,6 +81,6 @@ class BookMarkNotifier extends ChangeNotifier {
   }
 
   getBookMarks() {
-   bookmarks = BookMarkHelper.getBookmarks();
+    bookmarks = BookMarkHelper.getBookmarks();
   }
 }

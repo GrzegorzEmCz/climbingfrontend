@@ -54,7 +54,7 @@ class PageThree extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.to(() => const  RegistrationPage());
+                    Get.to(() => const RegistrationPage());
                   },
                   child: Container(
                     width: width * 0.4,

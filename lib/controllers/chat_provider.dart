@@ -45,7 +45,7 @@ class ChatNotifier extends ChangeNotifier {
       return DateFormat.jm().format(messageTimeBeijing);
     } else if (now.year == messageTimeBeijing.year &&
         now.month == messageTimeBeijing.month &&
-        now.day - messageTimeBeijing.day == 1 ) {
+        now.day - messageTimeBeijing.day == 1) {
       return "Yesterday";
     } else {
       return DateFormat.yMEd().format(messageTimeBeijing);

@@ -22,8 +22,7 @@ class MesssagingHelper {
     var url = Uri.http(Config.apiUrl, Config.messagingUrl);
     var response = await client.post(url,
         headers: requestHeaders, body: jsonEncode(model.toJson()));
-    
-    
+
     print(response.statusCode);
 
     if (response.statusCode == 200) {

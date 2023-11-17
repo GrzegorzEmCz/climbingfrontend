@@ -28,7 +28,7 @@ class RoadHorizontalTile extends StatelessWidget {
             children: [
               Row(
                 children: [
-                   CircleAvatar(
+                  CircleAvatar(
                     radius: 25,
                     backgroundImage: NetworkImage(road.imageUrl),
                   ),

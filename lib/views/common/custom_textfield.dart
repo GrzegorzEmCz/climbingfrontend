@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:climbingfrontend/views/common/exports.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key, required this.controller, required this.hintText, required this.keyboardType, this.validator, this.suffixIcon, this.obscureText});
+  const CustomTextField(
+      {super.key,
+      required this.controller,
+      required this.hintText,
+      required this.keyboardType,
+      this.validator,
+      this.suffixIcon,
+      this.obscureText});
 
   final TextEditingController controller;
   final String hintText;
@@ -17,7 +24,7 @@ class CustomTextField extends StatelessWidget {
       color: Color(kLightGrey.value),
       child: TextFormField(
         keyboardType: keyboardType,
-        obscureText: obscureText??false,
+        obscureText: obscureText ?? false,
         decoration: InputDecoration(
             hintText: hintText,
             suffixIcon: suffixIcon,

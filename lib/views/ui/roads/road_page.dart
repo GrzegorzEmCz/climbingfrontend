@@ -194,7 +194,6 @@ class _RoadPageState extends State<RoadPage> {
                               padding: EdgeInsets.only(bottom: 20.h),
                               child: CustomOutlineBtn(
                                   onTap: () {
-                                   
                                     CreateChat model =
                                         CreateChat(userId: road.agentId);
                                     ChatHelper.apply(model).then((response) {

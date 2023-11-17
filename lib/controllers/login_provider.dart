@@ -119,4 +119,3 @@ class LoginNotifier extends ChangeNotifier {
     });
   }
 }
-

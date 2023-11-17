@@ -108,7 +108,8 @@ class ChatsList extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       ReusableText(
-                                          text: chatNotifier.msgTime(chat.updatedAt.toString()),
+                                          text: chatNotifier.msgTime(
+                                              chat.updatedAt.toString()),
                                           style: appstyle(
                                               12,
                                               Color(kDark.value),
