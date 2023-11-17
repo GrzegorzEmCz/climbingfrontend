@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "136307252798",
+    "project_id": "climbingcondition",
+    "storage_bucket": "climbingcondition.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136307252798:android:69f1822ba4a7e9a05f7b6f",
+        "android_client_info": {
+          "package_name": "com.example.climbingfrontend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2U8S1PlUkw2aWgd1oBVofX8_ac-8QKJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
