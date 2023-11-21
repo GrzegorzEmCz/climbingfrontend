@@ -33,7 +33,7 @@ class BookMarkHelper {
   }
 
   // DELETE BOOKMARKS
-  static Future<bool> deleteBookmarks(String jobId) async {
+  static Future<bool> deleteBookmarks(String roadId) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     String? token = prefs.getString('token');
 
@@ -42,7 +42,7 @@ class BookMarkHelper {
       'token': 'Bearer $token'
     };
 
-    var url = Uri.http(Config.apiUrl, "${Config.bookmarkUrl}/$jobId");
+    var url = Uri.http(Config.apiUrl, "${Config.bookmarkUrl}/$roadId");
     var response = await client.delete(
       url,
       headers: requestHeaders,

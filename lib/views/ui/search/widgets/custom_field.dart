@@ -34,7 +34,6 @@ class CustomField extends StatelessWidget {
               suffixIcon: suffixIcon,
               suffixIconColor: Color(kLight.value),
               hintStyle: appstyle(16, Color(kLight.value), FontWeight.w500),
-              // contentPadding: EdgeInsets.only(left: 24),
               errorBorder: const OutlineInputBorder(
                 borderRadius: BorderRadius.zero,
                 borderSide: BorderSide(color: Colors.white, width: 0.5),

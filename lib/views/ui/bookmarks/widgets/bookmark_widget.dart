@@ -17,7 +17,7 @@ class BookMarkTileWidget extends StatelessWidget {
       padding: EdgeInsets.only(bottom: 12.h),
       child: GestureDetector(
         onTap: () {
-          Get.to(() => RoadPage(title: road.road.company, id: road.road.id));
+          Get.to(() => RoadPage(title: road.road.name, id: road.road.id));
         },
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
@@ -43,13 +43,13 @@ class BookMarkTileWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ReusableText(
-                              text: road.road.company,
+                              text: road.road.name,
                               style: appstyle(
                                   20, Color(kDark.value), FontWeight.w600)),
                           SizedBox(
                             width: width * 0.5,
                             child: ReusableText(
-                                text: road.road.title,
+                                text: road.road.rock,
                                 style: appstyle(20, Color(kDarkGrey.value),
                                     FontWeight.w600)),
                           ),
@@ -71,13 +71,9 @@ class BookMarkTileWidget extends StatelessWidget {
                 child: Row(
                   children: [
                     ReusableText(
-                        text: road.road.salary,
+                        text: road.road.grade,
                         style:
                             appstyle(22, Color(kDark.value), FontWeight.w600)),
-                    ReusableText(
-                        text: "/${road.road.period}",
-                        style: appstyle(
-                            20, Color(kDarkGrey.value), FontWeight.w600)),
                   ],
                 ),
               )

@@ -1,55 +1,56 @@
 import 'dart:convert';
 
-List<RoadsResponse> roadsResponseFromJson(String str) => List<RoadsResponse>.from(json.decode(str).map((x) => RoadsResponse.fromJson(x)));
+List<RoadsResponse> roadsResponseFromJson(String str) =>
+    List<RoadsResponse>.from(
+        json.decode(str).map((x) => RoadsResponse.fromJson(x)));
 
 class RoadsResponse {
-    RoadsResponse({
-        required this.id,
-        required this.title,
-        required this.location,
-        required this.company,
-        required this.hiring,
-        required this.description,
-        required this.salary,
-        required this.period,
-        required this.contract,
-        required this.requirements,
-        required this.imageUrl,
-        required this.agentId,
-        required this.createdAt,
-        required this.updatedAt,
-    });
+  RoadsResponse({
+    required this.id,
+    required this.rock,
+    required this.location,
+    required this.name,
+    required this.protected,
+    required this.description,
+    required this.grade,
+    required this.season,
+    required this.type,
+    required this.requirements,
+    required this.imageUrl,
+    required this.agentId,
+    required this.createdAt,
+    required this.updatedAt,
+  });
 
-    final String id;
-    final String title;
-    final String location;
-    final String company;
-    final bool hiring;
-    final String description;
-    final String salary;
-    final String period;
-    final String contract;
-    final List<String> requirements;
-    final String imageUrl;
-    final String agentId;
-    final DateTime createdAt;
-    final DateTime updatedAt;
+  final String id;
+  final String rock;
+  final String location;
+  final String name;
+  final bool protected;
+  final String description;
+  final String grade;
+  final String season;
+  final String type;
+  final List<String> requirements;
+  final String imageUrl;
+  final String agentId;
+  final DateTime createdAt;
+  final DateTime updatedAt;
 
-    factory RoadsResponse.fromJson(Map<String, dynamic> json) => RoadsResponse(
+  factory RoadsResponse.fromJson(Map<String, dynamic> json) => RoadsResponse(
         id: json["_id"],
-        title: json["title"],
+        rock: json["rock"],
         location: json["location"],
-        company: json["company"],
-        hiring: json["hiring"],
+        name: json["name"],
+        protected: json["protected"],
         description: json["description"],
-        salary: json["salary"],
-        period: json["period"],
-        contract: json["contract"],
+        grade: json["grade"],
+        season: json["season"],
+        type: json["type"],
         requirements: List<String>.from(json["requirements"].map((x) => x)),
         imageUrl: json["imageUrl"],
         agentId: json["agentId"],
         createdAt: DateTime.parse(json["createdAt"]),
         updatedAt: DateTime.parse(json["updatedAt"]),
-    );
-
+      );
 }

@@ -6,35 +6,35 @@ List<SearchModel> searchModelFromJson(String str) => List<SearchModel>.from(
 class SearchModel {
   SearchModel({
     required this.id,
-    required this.title,
+    required this.rock,
     required this.location,
-    required this.company,
-    required this.hiring,
-    required this.salary,
-    required this.period,
-    required this.contract,
+    required this.name,
+    required this.protected,
+    required this.grade,
+    required this.season,
+    required this.type,
     required this.imageUrl,
   });
 
   final String id;
-  final String title;
+  final String rock;
   final String location;
-  final String company;
-  final bool hiring;
-  final String salary;
-  final String period;
-  final String contract;
+  final String name;
+  final bool protected;
+  final String grade;
+  final String season;
+  final String type;
   final String imageUrl;
 
   factory SearchModel.fromJson(Map<String, dynamic> json) => SearchModel(
         id: json["_id"],
-        title: json["title"],
+        rock: json["rock"],
         location: json["location"],
-        company: json["company"],
-        hiring: json["hiring"],
-        salary: json["salary"],
-        period: json["period"],
-        contract: json["contract"],
+        name: json["name"],
+        protected: json["protected"],
+        grade: json["grade"],
+        season: json["season"],
+        type: json["type"],
         imageUrl: json["imageUrl"],
       );
 }

@@ -20,7 +20,7 @@ class RoadHorizontalTile extends StatelessWidget {
         padding: EdgeInsets.only(right: 12.w),
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-          width: width * 0.7,
+          width: width * 0.9,
           height: hieght * 0.27,
           color: Color(kLightGrey.value),
           child: Column(
@@ -34,13 +34,13 @@ class RoadHorizontalTile extends StatelessWidget {
                   ),
                   const WidthSpacer(width: 15),
                   ReusableText(
-                      text: road.company,
-                      style: appstyle(26, Color(kDark.value), FontWeight.w600)),
+                      text: road.name,
+                      style: appstyle(24, Color(kDark.value), FontWeight.w600)),
                 ],
               ),
               const HeightSpacer(size: 15),
               ReusableText(
-                  text: road.title,
+                  text: road.rock,
                   style: appstyle(20, Color(kDark.value), FontWeight.w600)),
               ReusableText(
                   text: road.location,
@@ -52,13 +52,9 @@ class RoadHorizontalTile extends StatelessWidget {
                   Row(
                     children: [
                       ReusableText(
-                          text: road.salary,
+                          text: road.grade,
                           style: appstyle(
                               23, Color(kDark.value), FontWeight.w600)),
-                      ReusableText(
-                          text: "/${road.period}",
-                          style: appstyle(
-                              23, Color(kDarkGrey.value), FontWeight.w600)),
                     ],
                   ),
                   CircleAvatar(

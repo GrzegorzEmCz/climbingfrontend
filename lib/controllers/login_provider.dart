@@ -102,7 +102,7 @@ class LoginNotifier extends ChangeNotifier {
   updateProfile(ProfileUpdateReq model) async {
     AuthHelper.updateProfile(model).then((response) {
       if (response) {
-        Get.snackbar("Profile Update", "Enjoy your search for a job",
+        Get.snackbar("Profile Update", "Enjoy your search",
             colorText: Color(kLight.value),
             backgroundColor: Color(kLightBlue.value),
             icon: const Icon(Icons.add_alert));

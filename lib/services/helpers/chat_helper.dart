@@ -10,7 +10,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 class ChatHelper {
   static var client = https.Client();
 
-  // Apply for job
   static Future<List<dynamic>> apply(CreateChat model) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     String? token = prefs.getString('token');

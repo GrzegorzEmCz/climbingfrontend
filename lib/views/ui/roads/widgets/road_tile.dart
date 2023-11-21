@@ -17,7 +17,7 @@ class VerticalTileWidget extends StatelessWidget {
       padding: EdgeInsets.only(bottom: 12.h),
       child: GestureDetector(
         onTap: () {
-          Get.to(() => RoadPage(title: road.company, id: road.id));
+          Get.to(() => RoadPage(title: road.name, id: road.id));
         },
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
@@ -43,13 +43,13 @@ class VerticalTileWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ReusableText(
-                              text: road.company,
+                              text: road.name,
                               style: appstyle(
                                   20, Color(kDark.value), FontWeight.w600)),
                           SizedBox(
                             width: width * 0.5,
                             child: ReusableText(
-                                text: road.title,
+                                text: road.rock,
                                 style: appstyle(20, Color(kDarkGrey.value),
                                     FontWeight.w600)),
                           ),
@@ -71,13 +71,9 @@ class VerticalTileWidget extends StatelessWidget {
                 child: Row(
                   children: [
                     ReusableText(
-                        text: road.salary,
+                        text: road.grade,
                         style:
                             appstyle(22, Color(kDark.value), FontWeight.w600)),
-                    ReusableText(
-                        text: "/${road.period}",
-                        style: appstyle(
-                            20, Color(kDarkGrey.value), FontWeight.w600)),
                   ],
                 ),
               )

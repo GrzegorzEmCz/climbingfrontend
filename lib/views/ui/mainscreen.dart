@@ -29,7 +29,7 @@ class _MainScreenState extends State<MainScreen> {
               zoomNotifier.currentIndex = index;
             },
           ),
-          mainScreen: currentSreen(),
+          mainScreen: _getCurrentSreen(),
           borderRadius: 30,
           showShadow: true,
           angle: 0.0,
@@ -40,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  Widget currentSreen() {
+  Widget _getCurrentSreen() {
     var zoomNotifier = Provider.of<ZoomNotifier>(context);
     switch (zoomNotifier.currentIndex) {
       case 0:

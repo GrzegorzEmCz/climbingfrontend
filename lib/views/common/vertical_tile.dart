@@ -41,14 +41,14 @@ class VerticalTile extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ReusableText(
-                            text: road!.company,
+                            text: road!.name,
                             style: appstyle(
                                 20, Color(kDark.value), FontWeight.w600),
                           ),
                           SizedBox(
                             width: width * 0.5,
                             child: ReusableText(
-                              text: road!.title,
+                              text: road!.rock,
                               style: appstyle(
                                   18, Color(kDarkGrey.value), FontWeight.w600),
                             ),
@@ -69,13 +69,13 @@ class VerticalTile extends StatelessWidget {
                 child: Row(
                   children: [
                     ReusableText(
-                        text: road!.salary,
+                        text: road!.grade,
                         style:
                             appstyle(23, Color(kDark.value), FontWeight.w600)),
-                    ReusableText(
-                        text: "/${road!.period}",
-                        style: appstyle(
-                            23, Color(kDarkGrey.value), FontWeight.w600))
+                    // ReusableText(
+                    //     text: "/${road!.season}",
+                    //     style: appstyle(
+                    //         23, Color(kDarkGrey.value), FontWeight.w600))
                   ],
                 ),
               )

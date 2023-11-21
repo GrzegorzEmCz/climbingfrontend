@@ -145,13 +145,13 @@ class _ProfilePageState extends State<ProfilePage> {
                                           MainAxisAlignment.center,
                                       children: [
                                         ReusableText(
-                                            text: "Resume from JobHub",
+                                            text: "Topo",
                                             style: appstyle(
                                                 18,
                                                 Color(kDark.value),
                                                 FontWeight.w500)),
                                         ReusableText(
-                                            text: "JobHub Resume",
+                                            text: "mapa",
                                             style: appstyle(
                                                 16,
                                                 Color(kDarkGrey.value),

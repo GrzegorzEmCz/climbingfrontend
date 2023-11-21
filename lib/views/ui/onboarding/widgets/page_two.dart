@@ -19,14 +19,14 @@ class PageTwo extends StatelessWidget {
             const HeightSpacer(size: 45),
             Padding(
               padding: EdgeInsets.all(8.w),
-              child: Image.asset("assets/images/page2.png"),
+              child: Image.asset("assets/images/S2A.jpeg"),
             ),
             const HeightSpacer(size: 20),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Stable yourself \n with your ability",
+                  "everything about \n climbing \n in one place",
                   textAlign: TextAlign.center,
                   style: appstyle(30, Color(kLight.value), FontWeight.w500),
                 ),
@@ -34,7 +34,7 @@ class PageTwo extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8),
                   child: Text(
-                    "data",
+                    "see what you can do with climbing app",
                     style: appstyle(
                         14, Color(kLightGrey.value), FontWeight.normal),
                   ),

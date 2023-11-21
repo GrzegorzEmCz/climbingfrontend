@@ -20,21 +20,21 @@ class PageThree extends StatelessWidget {
         color: Color(kLightBlue.value),
         child: Column(
           children: [
-            Image.asset("assets/images/page3.png"),
-            const HeightSpacer(size: 20),
+            Image.asset("assets/images/S3B.jpeg"),
+            const HeightSpacer(size: 30),
             ReusableText(
-                text: "Welcome To JobHub",
+                text: "Climbing Conditions",
                 style: appstyle(30, Color(kLight.value), FontWeight.w600)),
             const HeightSpacer(size: 15),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 30.w),
               child: Text(
-                "We help you find your dream job to your skillset, location and preference to build your career",
+                "We help you find your dream road to your skillset, location and preference",
                 textAlign: TextAlign.center,
                 style: appstyle(14, Color(kLight.value), FontWeight.normal),
               ),
             ),
-            const HeightSpacer(size: 20),
+            const HeightSpacer(size: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [

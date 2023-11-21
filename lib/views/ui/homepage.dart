@@ -96,8 +96,7 @@ class _HomePageState extends State<HomePage> {
                                       return RoadHorizontalTile(
                                         onTap: () {
                                           Get.to(() => RoadPage(
-                                              title: road.company,
-                                              id: road.id));
+                                              title: road.name, id: road.id));
                                         },
                                         road: road,
                                       );
@@ -122,8 +121,8 @@ class _HomePageState extends State<HomePage> {
                             final roads = snapshot.data;
                             return VerticalTile(
                               onTap: () {
-                                Get.to(() => RoadPage(
-                                    title: roads!.company, id: roads.id));
+                                Get.to(() =>
+                                    RoadPage(title: roads!.name, id: roads.id));
                               },
                               road: roads,
                             );

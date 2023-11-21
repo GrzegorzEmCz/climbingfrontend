@@ -12,18 +12,18 @@ class BookmarkResModel {
     required this.id,
     required this.road,
     required this.userId,
-    required this.title,
+    required this.rock,
     required this.imageUrl,
-    required this.company,
+    required this.name,
     required this.location,
   });
 
   final String id;
   final String road;
   final String userId;
-  final String title;
+  final String rock;
   final String imageUrl;
-  final String company;
+  final String name;
   final String location;
 
   factory BookmarkResModel.fromJson(Map<String, dynamic> json) =>
@@ -31,9 +31,9 @@ class BookmarkResModel {
         id: json["_id"],
         road: json["road"],
         userId: json["userId"],
-        title: json["title"],
+        rock: json["rock"],
         imageUrl: json["imageUrl"],
-        company: json["company"],
+        name: json["name"],
         location: json["location"],
       );
 
@@ -41,9 +41,9 @@ class BookmarkResModel {
         "_id": id,
         "road": road,
         "userId": userId,
-        "title": title,
+        "rock": rock,
         "imageUrl": imageUrl,
-        "company": company,
+        "name": name,
         "location": location,
       };
 }

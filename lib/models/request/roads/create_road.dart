@@ -5,40 +5,40 @@ String createRoadsRequestToJson(CreateRoadsRequest data) =>
 
 class CreateRoadsRequest {
   CreateRoadsRequest({
-    required this.title,
+    required this.rock,
     required this.location,
-    required this.company,
-    required this.hiring,
+    required this.name,
+    required this.protected,
     required this.description,
-    required this.salary,
-    required this.period,
-    required this.contract,
+    required this.grade,
+    required this.season,
+    required this.type,
     required this.imageUrl,
     required this.agentId,
     required this.requirements,
   });
 
-  final String title;
+  final String rock;
   final String location;
-  final String company;
-  final bool hiring;
+  final String name;
+  final bool protected;
   final String description;
-  final String salary;
-  final String period;
-  final String contract;
+  final String grade;
+  final String season;
+  final String type;
   final String imageUrl;
   final String agentId;
   final List<String> requirements;
 
   Map<String, dynamic> toJson() => {
-        "title": title,
+        "rock": rock,
         "location": location,
-        "company": company,
-        "hiring": hiring,
+        "name": name,
+        "protected": protected,
         "description": description,
-        "salary": salary,
-        "period": period,
-        "contract": contract,
+        "grade": grade,
+        "season": season,
+        "type": type,
         "imageUrl": imageUrl,
         "agentId": agentId,
         "requirements": List<dynamic>.from(requirements.map((x) => x)),

@@ -97,7 +97,7 @@ class _RoadPageState extends State<RoadPage> {
                                     ),
                                     const HeightSpacer(size: 10),
                                     ReusableText(
-                                        text: road.title,
+                                        text: road.rock,
                                         style: appstyle(22, Color(kDark.value),
                                             FontWeight.w600)),
                                     const HeightSpacer(size: 5),
@@ -119,25 +119,16 @@ class _RoadPageState extends State<RoadPage> {
                                               width: width * 0.26,
                                               hieght: hieght * 0.04,
                                               color2: Color(kLight.value),
-                                              text: road.contract,
+                                              text: road.type,
                                               color: Color(kOrange.value)),
                                           Row(
                                             children: [
                                               ReusableText(
-                                                  text: road.salary,
+                                                  text: road.grade,
                                                   style: appstyle(
                                                       22,
                                                       Color(kDark.value),
                                                       FontWeight.w600)),
-                                              SizedBox(
-                                                width: width * 0.2,
-                                                child: ReusableText(
-                                                    text: "/${road.period}",
-                                                    style: appstyle(
-                                                        22,
-                                                        Color(kDark.value),
-                                                        FontWeight.w600)),
-                                              )
                                             ],
                                           ),
                                         ],
@@ -200,7 +191,7 @@ class _RoadPageState extends State<RoadPage> {
                                       if (response[0]) {
                                         SendMessage model = SendMessage(
                                             content:
-                                                "Hello, I'm interested in ${road.title}",
+                                                "Hello, You was added to the chat for road ${road.name}",
                                             chatId: response[1],
                                             receiver: road.agentId);
                                         MesssagingHelper.sendMessage(model)
@@ -213,7 +204,7 @@ class _RoadPageState extends State<RoadPage> {
                                   color2: Color(kOrange.value),
                                   width: width,
                                   hieght: hieght * 0.06,
-                                  text: "Apply Now",
+                                  text: "Join",
                                   color: Color(kLight.value)),
                             ),
                           )
