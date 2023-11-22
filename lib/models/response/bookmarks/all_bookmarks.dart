@@ -16,7 +16,7 @@ class AllBookmark {
 
   factory AllBookmark.fromJson(Map<String, dynamic> json) => AllBookmark(
         id: json["_id"],
-        road: Road.fromJson(json["job"]),
+        road: Road.fromJson(json["road"]),
         userId: json["userId"],
       );
 }

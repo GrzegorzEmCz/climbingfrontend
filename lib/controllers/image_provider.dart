@@ -41,12 +41,12 @@ class ImageUpoader extends ChangeNotifier {
         ],
         uiSettings: [
           AndroidUiSettings(
-              toolbarTitle: "Climbing Condition Cropper",
+              toolbarTitle: "JobHub Cropper",
               toolbarColor: Color(kLightBlue.value),
               toolbarWidgetColor: Color(kLight.value),
               initAspectRatio: CropAspectRatioPreset.ratio5x4,
               lockAspectRatio: true),
-          IOSUiSettings(title: "Climbing Condition Cropper")
+          IOSUiSettings(title: "JobHub Cropper")
         ]);
 
     if (croppedFile != null) {
@@ -62,7 +62,7 @@ class ImageUpoader extends ChangeNotifier {
 
     final ref = FirebaseStorage.instance
         .ref()
-        .child("climbingcondition")
+        .child("jobhub")
         .child("${uuid.v1()}.jpg");
     await ref.putFile(image);
 
