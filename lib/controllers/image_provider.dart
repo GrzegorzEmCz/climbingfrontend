@@ -41,12 +41,12 @@ class ImageUpoader extends ChangeNotifier {
         ],
         uiSettings: [
           AndroidUiSettings(
-              toolbarTitle: "JobHub Cropper",
+              toolbarTitle: "Climbing App",
               toolbarColor: Color(kLightBlue.value),
               toolbarWidgetColor: Color(kLight.value),
               initAspectRatio: CropAspectRatioPreset.ratio5x4,
               lockAspectRatio: true),
-          IOSUiSettings(title: "JobHub Cropper")
+          IOSUiSettings(title: "Climbing App")
         ]);
 
     if (croppedFile != null) {
